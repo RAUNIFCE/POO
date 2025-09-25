@@ -1,0 +1,74 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        /*
+    int idade=18;
+    double salario=5500.00;
+    char letra='K';
+    String disciplina="Programação Orientada a Objetos";
+    System.out.println("Olá mundo,Java");
+    System.out.printf("Tenho %d anos\n",idade);
+    System.out.println("Meu salário é "+salario);
+    String curso="Sistemas de ";
+    String curso2="Informação";
+    String completo=curso.concat(curso2);
+    System.out.println(completo);
+    System.out.println(curso.length());
+    System.out.println(curso2.equals("informação"));
+    System.out.println(curso2.equalsIgnoreCase("informação"));
+    System.out.println(curso2=="Informação");
+    System.out.println(curso2.compareTo("informação"));
+    // Cria um objeto Scanner para ler entrada de dados do teclado (System.in)
+    Scanner ent = new Scanner(System.in);
+    // Exibe uma mensagem solicitando que o usuário informe seu nome
+    System.out.println("Informe seu nome: ");
+    // Lê a próxima palavra (token) digitada pelo usuário e armazena na variável 'nome'
+    // O metodo next lê apenas até o primeiro espaço em branco se quiser uma linha inteira use o nextline
+    String nome = ent.nextLine();
+    // Exibe o nome digitado pelo usuário
+    System.out.println("Meu nome é: " + nome);
+    System.out.println("Informe sua altura: ");
+    double alt =ent.nextDouble();//com virgula
+    System.out.println("Informe um numero: ");
+    int n =ent.nextInt();
+    System.out.println("Altura"+alt+" numero "+n);
+    */
+
+     double num1=0;
+     double num2=0;
+     Scanner ent = new Scanner(System.in);
+     System.out.println("Digite o primeiro número ");
+     num1=ent.nextDouble();
+     System.out.println("Digite o segundo número ");
+     num2=ent.nextDouble();
+    double soma=num1+num2;
+    double sub=num1-num2;
+    double multi=num1*num2;
+    double div=num1/num2;
+        int opc=0;
+        do{
+            System.out.printf("Digite a opção desejada \n1-Soma\n2-Subtração\n3-Multiplicação\n4-Dividir\n");
+            opc=ent.nextInt();
+
+            if(opc==1){
+                System.out.println("A soma é "+soma);
+            }
+            if(opc==2){
+                System.out.println(" a subtração é "+sub);
+            }
+            if(opc==3){
+                System.out.println("a multiplicação é "+multi);
+            }
+            if(opc==4){
+                System.out.printf(" a divisão é %f ",div);
+            }
+        }while(opc!=5);
+    System.out.println("a soma é"+soma+" a subtração é"+sub+" a multiplicação é"+multi+" a divisão é"+div);
+    int [] num={1,2,3};
+    for(int a:num) {//for each
+        System.out.println("n=" + a);
+    }
+}
+}
