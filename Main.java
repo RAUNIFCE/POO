@@ -51,6 +51,6 @@ public class Main {
         System.out.println(frutas.contains("Goiaba"));//cuidado pq é key sensitive
         frutas.clear();//apaga todos os elementos da lista
         System.out.println(frutas.size());
-
+         System.out.println(frutas.indexOf("Goiaba"));//retorna indice de goiaba
     }
 }
