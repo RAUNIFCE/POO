@@ -1,74 +1,56 @@
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        /*
-    int idade=18;
-    double salario=5500.00;
-    char letra='K';
-    String disciplina="Programação Orientada a Objetos";
-    System.out.println("Olá mundo,Java");
-    System.out.printf("Tenho %d anos\n",idade);
-    System.out.println("Meu salário é "+salario);
-    String curso="Sistemas de ";
-    String curso2="Informação";
-    String completo=curso.concat(curso2);
-    System.out.println(completo);
-    System.out.println(curso.length());
-    System.out.println(curso2.equals("informação"));
-    System.out.println(curso2.equalsIgnoreCase("informação"));
-    System.out.println(curso2=="Informação");
-    System.out.println(curso2.compareTo("informação"));
-    // Cria um objeto Scanner para ler entrada de dados do teclado (System.in)
-    Scanner ent = new Scanner(System.in);
-    // Exibe uma mensagem solicitando que o usuário informe seu nome
-    System.out.println("Informe seu nome: ");
-    // Lê a próxima palavra (token) digitada pelo usuário e armazena na variável 'nome'
-    // O metodo next lê apenas até o primeiro espaço em branco se quiser uma linha inteira use o nextline
-    String nome = ent.nextLine();
-    // Exibe o nome digitado pelo usuário
-    System.out.println("Meu nome é: " + nome);
-    System.out.println("Informe sua altura: ");
-    double alt =ent.nextDouble();//com virgula
-    System.out.println("Informe um numero: ");
-    int n =ent.nextInt();
-    System.out.println("Altura"+alt+" numero "+n);
-    */
+        int[] idade= new int[5];//cria array de tamanho 5
+        String[] nomes ={"maria","jose","joao","pedro","miguel"};/* ou  String[] nomes = new String[4];*/
+        idade[0]=10;
+        idade[2]=25;
+        //System.out.println(idade[1]);
+        //System.out.println(nomes[4]);
+        /*for(String n:nomes){//percorrer lista de strings
+            System.out.println(n);
+        }*/
+        /*for (int i=0;i<5;i++){
+            System.out.println(idade[i]);
+        }*/
+        /*for(int n:idade){
+            System.out.println(n);
+        }*/
+        /*for(int i=0;i< idade.length;i++){//se nao souber o tamanho use .length
+            System.out.println(idade[i]);
+        }*/
+        ArrayList<String> frutas= new ArrayList<>();// a partir daqui nao acesso com frutas[i], mas com frutas.
+        frutas.add("Manga");
+        frutas.add("Goiaba");
+        frutas.add("Caju");
 
-     double num1=0;
-     double num2=0;
-     Scanner ent = new Scanner(System.in);
-     System.out.println("Digite o primeiro número ");
-     num1=ent.nextDouble();
-     System.out.println("Digite o segundo número ");
-     num2=ent.nextDouble();
-    double soma=num1+num2;
-    double sub=num1-num2;
-    double multi=num1*num2;
-    double div=num1/num2;
-        int opc=0;
-        do{
-            System.out.printf("Digite a opção desejada \n1-Soma\n2-Subtração\n3-Multiplicação\n4-Dividir\n");
-            opc=ent.nextInt();
+        System.out.println(frutas.size());//retorna a quantidades de itens na lista de frutas
+        frutas.add(1,"Morango");
+        frutas.add(2,"Pêra");
 
-            if(opc==1){
-                System.out.println("A soma é "+soma);
-            }
-            if(opc==2){
-                System.out.println(" a subtração é "+sub);
-            }
-            if(opc==3){
-                System.out.println("a multiplicação é "+multi);
-            }
-            if(opc==4){
-                System.out.printf(" a divisão é %f ",div);
-            }
-        }while(opc!=5);
-    System.out.println("a soma é"+soma+" a subtração é"+sub+" a multiplicação é"+multi+" a divisão é"+div);
-    int [] num={1,2,3};
-    for(int a:num) {//for each
-        System.out.println("n=" + a);
+        for(String f:frutas){//percorrer lista de strings
+            System.out.println(f);
+        }
+        frutas.set(0,"Melancia");//substitui a string naquela posição pela string passado no parametro
+        System.out.println("\nsubstituição\n");
+        for(String f:frutas){//percorrer lista de strings
+            System.out.println(f);
+        }
+        System.out.println("\n"+frutas.get(2)+"\n");//retorne o elemento na posição 2
+        //frutas.remove(0);//remove tal elemento da lista
+        //System.out.println(frutas.remove(0));/*mostra oq foi retirado*/
+
+        frutas.remove("Caju");
+        for(String f:frutas){//percorrer lista de strings
+            System.out.println(f);
+        }
+        System.out.println(frutas.contains("Maracujá"));//ve se tem tal palavra na lista
+        System.out.println(frutas.contains("Goiaba"));//cuidado pq é key sensitive
+        frutas.clear();//apaga todos os elementos da lista
+        System.out.println(frutas.size());
+
     }
-}
 }
