@@ -31,5 +31,23 @@ public class Main {
         for(int i=0;i< nomesProdutos.length;i++){
             System.out.println(nomesProdutos[i]);
         }
+        //Terceira questao
+        System.out.println("\n");
+         ArrayList<String> minhaRotina= new ArrayList<>();
+         minhaRotina.add("Acordar");
+         minhaRotina.add("Tomar café");
+         minhaRotina.add("Estudar Java");
+         minhaRotina.add(1,"Fazer exercícios");
+          for(String r:minhaRotina){//percorrer lista de strings
+            System.out.println(r);
+        }
+        
+        //Quarta questao
+        minhaRotina.remove(2);
+        minhaRotina.remove("Tomar café");
+        System.out.println(minhaRotina.size());
+        for(String r:minhaRotina){//percorrer lista de strings
+            System.out.println(r);
+        }
     }
 }
