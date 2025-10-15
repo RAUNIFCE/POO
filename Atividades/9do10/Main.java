@@ -23,6 +23,10 @@ public class Main {
         Produto x= new Produto("Fone",25.0,5);
         lv.cadastrarProduto(x);
         lv.visualizarEstoque();
-
+        Produto a=new Produto("Garrafa",55.0,6);
+        lv.adicionarCarrinho(a);
+        lv.visualizarEstoque();
+        lv.excluirProdutoEstoque("Fone");
+        lv.visualizarEstoque();
     }
 }
