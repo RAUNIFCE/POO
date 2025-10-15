@@ -10,6 +10,7 @@ public class Main {
         p2.exibirInformacoes();
         p3.exibirInformacoes();
         */
+
         //Questao 2
         /*
         ArrayList<Cliente> c=new ArrayList<>();
@@ -23,7 +24,7 @@ public class Main {
         Inter.addcliente("josé",4678.00);
         Inter.visualizarClientes();
         */
-        
+
         //Questao 3 
         /* podemos alimentar o array lsit fora da loja virtual
         ArrayList<Produto> p=new ArrayList <>();
@@ -42,9 +43,25 @@ public class Main {
         lv.visualizarEstoque();
         lv.excluirProdutoEstoque("Fone");
         lv.visualizarEstoque();
-
          */
+        //Questao 4
+        ArrayList<Contato> ctt=new ArrayList<>();
+        Contato r= new Contato("Ruan",889999655);
+        ctt.add(r);
+        Contato m= new Contato("Marcelo",889400289);
+        ctt.add(m);
+        Agenda ag= new Agenda("Ruan",ctt);
+        Agenda segunda= new Agenda("emily");
+        segunda.addcontatos("Davi",8899405);
+        segunda.addcontatos("Carlos",889765);
+        segunda.addcontatos("Jonas",00001);
 
+        ag.visualizarContatos();
+        segunda.visualizarContatos();
+        segunda.editarContato("Carlos","CH");
+        segunda.visualizarContatos();
+        segunda.removerContato("Jonas");
+        segunda.visualizarContatos();
 
 
     }
