@@ -10,11 +10,18 @@ public class Main {
         //bb.emprestarLivro(lB); essa brincadeira ele não deixa,tem que trycatchar
         try {
             bb.emprestarLivro(lB);
-            bb.emprestarLivro(lC);
+
         } catch (LivroNaoDisponivelException e) {
             System.out.println(e.getMessage());
         }
-        
+        try {
+            bb.emprestarLivro(lC);
+        } catch (DadosInvalidosException e) {
+            System.out.println(e.getMessage());
+        } catch (LivroNaoDisponivelException e) {
+            throw new RuntimeException(e);
+        }
+
 
     }
 }
